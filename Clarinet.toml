@@ -1,0 +1,8 @@
+[project]
+name = "encryption-app"
+network = "devnet"
+description = "Clarity smart contract project for secure, encrypted file transfer metadata on Stacks."
+
+[contracts.secure-file-transfer]
+path = "contracts/secure-file-transfer.clar"
+depends_on = []
