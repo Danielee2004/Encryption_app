@@ -1,0 +1,10 @@
+import { defineConfig } from "vitest/config";
+import { vitestSetupFilePath } from "@stacks/clarinet-sdk/vitest";
+
+export default defineConfig({
+  test: {
+    environment: "node",
+    globals: true,
+    setupFiles: [vitestSetupFilePath],
+  },
+});

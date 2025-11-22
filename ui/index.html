@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Encryption App - Secure File Transfer</title>
+  </head>
+  <body>
+    <h1>Encryption App - Secure File Transfer</h1>
+    <section>
+      <h2>Create encrypted transfer</h2>
+      <label>
+        Recipient principal:
+        <input id="recipient" placeholder="ST..." />
+      </label>
+      <label>
+        Storage URI (where encrypted file lives):
+        <input id="storage-uri" placeholder="https://..." />
+      </label>
+      <label>
+        Encryption scheme:
+        <input id="scheme" value="aes-256-gcm" />
+      </label>
+      <label>
+        File hash (hex of ciphertext hash):
+        <input id="file-hash" placeholder="64 hex chars" />
+      </label>
+      <button id="create-transfer">Create transfer</button>
+      <pre id="create-result"></pre>
+    </section>
+
+    <section>
+      <h2>Manage transfer</h2>
+      <label>
+        Transfer ID:
+        <input id="transfer-id" type="number" />
+      </label>
+      <button id="get-transfer">Get transfer</button>
+      <button id="revoke-transfer">Revoke (sender)</button>
+      <button id="mark-received">Mark received (recipient)</button>
+      <pre id="transfer-view"></pre>
+    </section>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
